@@ -154,13 +154,13 @@ public fun is_subscribed(nft: &SubscriptionNFT, clock: &Clock): bool {
         let expiration_time = option::destroy_some(nft.expiration_timestamp_ms);
         let current_time = clock::timestamp_ms(clock);
         current_time < expiration_time
-    }
+    };
     // Re-add option after check if needed, or design assumes it's consumed/checked once.
     // For a simple view function, let's assume it's just a check:
-    // let expiration_time_opt = nft.expiration_timestamp_ms;
-    // if (option::is_some(&expiration_time_opt)) {
-    //     clock::timestamp_ms(clock) < *option::borrow(&expiration_time_opt)
-    // } else { true }
+    let expiration_time_opt = nft.expiration_timestamp_ms;
+    if (option::is_some(&expiration_time_opt)) {
+        clock::timestamp_ms(clock) < *option::borrow(&expiration_time_opt)
+    } else { true }
 }
 
     /// View function to get NFT details.

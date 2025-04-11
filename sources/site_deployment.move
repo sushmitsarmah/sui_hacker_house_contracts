@@ -36,6 +36,10 @@ public fun sub_nft_id(site: &DeployedSite): Option<ID> {
     site.subscription_nft_id
 }
 
+public fun suins_name(site: &DeployedSite): Option<String> {
+    site.suins_name
+}
+
 /// Deploys a site, linking a CID to the user's wallet.
 /// Requires a valid SubscriptionNFT to proceed.
 public entry fun deploy_site(
