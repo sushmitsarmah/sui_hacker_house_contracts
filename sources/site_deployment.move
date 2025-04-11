@@ -27,6 +27,15 @@ fun init(ctx: &mut TxContext) {
         transfer::transfer(AdminCap { id: object::new(ctx) }, tx_context::sender(ctx));
 }
 
+// In the subscription_nft module
+public fun owner(site: &DeployedSite): address {
+    site.owner
+}
+
+public fun sub_nft_id(site: &DeployedSite): Option<ID> {
+    site.subscription_nft_id
+}
+
 /// Deploys a site, linking a CID to the user's wallet.
 /// Requires a valid SubscriptionNFT to proceed.
 public entry fun deploy_site(
