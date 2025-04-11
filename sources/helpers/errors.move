@@ -10,6 +10,7 @@ const EAdminOnly: u64 = 4;
 const ESubscriptionExpired: u64 = 101;
 const ENotSubscribed: u64 = 102;
 const EAlreadySubscribed: u64 = 103; // Or handle renewals differently
+const ENotNFTOwner: u64 = 104;
 
 // --- Deployment Errors ---
 const ECidAlreadyDeployed: u64 = 201;
@@ -31,6 +32,7 @@ public fun invalid_amount(): u64 { EInvalidAmount }
 public fun admin_only(): u64 { EAdminOnly }
 public fun subscription_expired(): u64 { ESubscriptionExpired }
 public fun not_subscribed(): u64 { ENotSubscribed }
+public fun not_nft_owner(): u64 { ENotNFTOwner }
 public fun already_subscribed(): u64 { EAlreadySubscribed }
 public fun cid_already_deployed(): u64 { ECidAlreadyDeployed }
 public fun invalid_project_cid(): u64 { EInvalidProjectCID }

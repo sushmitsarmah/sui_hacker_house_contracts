@@ -8,7 +8,7 @@ authors = ["0xa978cb922f960f219893f348d9a67a72eef6169247c010e6259823d37d892878"]
 [dependencies]
 Sui = { git = "https://github.com/MystenLabs/sui.git", subdir = "crates/sui-framework/packages/sui-framework", rev = "framework/mainnet" }
 # TODO: Anthony
-# suins = { git = "https://github.com/MystenLabs/suins-contracts.git", subdir = "packages/suins", rev = "main" }
+suins = { git = "https://github.com/MystenLabs/suins-contracts.git", subdir = "packages/suins", rev = "main" }
 
 # For remote import, use the `{ git = "...", subdir = "...", rev = "..." }`.
 # Revision can be a branch, a tag, and a commit hash.
@@ -22,7 +22,8 @@ Sui = { git = "https://github.com/MystenLabs/sui.git", subdir = "crates/sui-fram
 # Override = { local = "../conflicting/version", override = true }
 
 [addresses]
-site_forge = "0x0" # This will be replaced by the deployment address
+# site_forge = "0x0" # This will be replaced by the deployment address
+site_forge = "0xcde8c1552311e8d5bc4d685afeb9129d3ff70f0c6099270a24dd84d3f9e5d35f" # Testnet package ID
 sui = "0x2"
 # TODO: Anthony
 # suins = "0x22fa05f21b1ad71442491220bb9338f7b7095fe35000ef88d5400d28523bdd93"
@@ -41,7 +42,7 @@ sui = "0x2"
 # and `--dev` modes.
 # alice = "0xB0B"
 # Testnet addresses
-site_forge = "0xfd42cebd656ef2f2799555cd90bab93d12cf261275694d2e8c9cd7479de8c173" # Testnet package ID
+# site_forge = "0xcde8c1552311e8d5bc4d685afeb9129d3ff70f0c6099270a24dd84d3f9e5d35f" # Testnet package ID
 # suins = "0x5ceebf3264c4342a7776bb90f776fd9a8858fb0470c15c979e84196ba02a0c3e" # SUINS testnet address
 
 # Local network addresses (uncomment to use local network for testing)
