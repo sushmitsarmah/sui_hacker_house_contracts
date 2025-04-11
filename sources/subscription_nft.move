@@ -49,6 +49,11 @@ fun init(ctx: &mut TxContext) {
     });
 }
 
+// In the subscription_nft module
+public fun owner(nft: &SubscriptionNFT): address {
+    nft.owner
+}
+
 /// Mints a new Subscription NFT by paying with SUI.
 public entry fun mint_with_sui(
     mint_cap: &MintCap, // Requires mint capability (held by contract logic or frontend interaction)
