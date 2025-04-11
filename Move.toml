@@ -3,6 +3,7 @@ name = "SiteForge"
 edition = "2024.beta" # edition = "legacy" to use legacy (pre-2024) Move
 # license = ""           # e.g., "MIT", "GPL", "Apache 2.0"
 # authors = ["..."]      # e.g., ["Joe Smith (joesmith@noemail.com)", "John Snow (johnsnow@noemail.com)"]
+authors = ["0xa978cb922f960f219893f348d9a67a72eef6169247c010e6259823d37d892878"]
 
 [dependencies]
 Sui = { git = "https://github.com/MystenLabs/sui.git", subdir = "crates/sui-framework/packages/sui-framework", rev = "framework/mainnet" }
@@ -39,3 +40,10 @@ sui = "0x2"
 # The dev-addresses section allows overwriting named addresses for the `--test`
 # and `--dev` modes.
 # alice = "0xB0B"
+# Testnet addresses
+site_forge = "0xfd42cebd656ef2f2799555cd90bab93d12cf261275694d2e8c9cd7479de8c173" # Testnet package ID
+# suins = "0x5ceebf3264c4342a7776bb90f776fd9a8858fb0470c15c979e84196ba02a0c3e" # SUINS testnet address
+
+# Local network addresses (uncomment to use local network for testing)
+# site_forge = "0x5e5367902b2ef2cbbfc39f3dc829eb14f31f4db58bb05133086f2c34c871e354" 
+# suins = "0xlocal_suins_address_here"
